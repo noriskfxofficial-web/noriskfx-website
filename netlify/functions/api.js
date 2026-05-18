@@ -11,8 +11,8 @@ try {
 const STORE_NAME = process.env.BLOB_STORE || 'noriskfx-admin';
 const DB_KEY = 'database.json';
 const ADMIN_USER = process.env.ADMIN_USER || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ||;
-const JWT_SECRET = process.env.JWT_SECRET || 'CHANGE_THIS_SECRET_IN_NETLIFY_ENV';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ||'';
+const JWT_SECRET = process.env.JWT_SECRET || '';
 const JWT_EXPIRES_SECONDS = Number(process.env.JWT_EXPIRES_SECONDS || 60 * 60 * 8);
 
 const siteDefaults = {
