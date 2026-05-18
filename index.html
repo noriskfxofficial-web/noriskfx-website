@@ -15,6 +15,77 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .tradays-live-grid {
+      align-items: stretch;
+    }
+
+    .tradays-live-card {
+      min-height: 820px;
+    }
+
+    .tradays-widget-shell {
+      width: 100%;
+      height: 680px;
+      min-height: 620px;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(90, 205, 255, 0.22);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(62, 207, 255, 0.10), transparent 34%),
+        #061426;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 22px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .tradays-widget-shell #economicCalendarWidget {
+      width: 100%;
+      height: calc(100% - 30px);
+      min-height: 590px;
+    }
+
+    .tradays-widget-shell .ecw-copyright {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      background: rgba(3, 12, 24, 0.96);
+      font-size: 11px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .tradays-widget-shell .ecw-copyright a {
+      color: rgba(136, 224, 255, 0.78);
+      text-decoration: none;
+    }
+
+    .tradays-widget-shell .ecw-copyright a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 980px) {
+      .tradays-live-card {
+        min-height: auto;
+      }
+
+      .tradays-widget-shell {
+        height: 700px;
+        min-height: 620px;
+        border-radius: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .tradays-widget-shell {
+        height: 660px;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -174,44 +245,81 @@
     </div>
   </div>
 </section>
+
 <section class="section market-intelligence" id="weekly-news">
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow"><span data-ar="أخبار الأسبوع" data-en="Weekly Intelligence">أخبار الأسبوع</span></p>
-      <h2><span data-site-copy="weeklyTitle" data-ar="الأجندة الاقتصادية للأسبوع الحالي." data-en="This week’s economic calendar.">الأجندة الاقتصادية للأسبوع الحالي.</span></h2>
-      <p><span data-site-copy="weeklyLead" data-ar="تابع أهم أحداث الأسبوع من Tradays، وسجّلها من لوحة الأدمن ليظهر الجدول مباشرة على الموقع بدون iframe مكسور." data-en="Track the week’s key events from Tradays, then publish them from the admin so they appear on-site without a broken iframe.">تابع أهم أحداث الأسبوع من Tradays، وسجّلها من لوحة الأدمن ليظهر الجدول مباشرة على الموقع بدون iframe مكسور.</span></p>
+      <h2>
+        <span data-site-copy="weeklyTitle"
+              data-ar="الأجندة الاقتصادية المباشرة للأسبوع الحالي."
+              data-en="Live economic calendar for this week.">الأجندة الاقتصادية المباشرة للأسبوع الحالي.</span>
+      </h2>
+      <p>
+        <span data-site-copy="weeklyLead"
+              data-ar="تابع أهم أحداث الأسبوع مباشرة عبر جدول Tradays / MQL5 الرسمي، بتحديثات تلقائية وجدول واضح داخل الموقع."
+              data-en="Track this week’s key events through the official Tradays / MQL5 calendar widget, with automatic updates inside the website.">تابع أهم أحداث الأسبوع مباشرة عبر جدول Tradays / MQL5 الرسمي، بتحديثات تلقائية وجدول واضح داخل الموقع.</span>
+      </p>
     </div>
-    <div class="market-intelligence-grid">
+
+    <div class="market-intelligence-grid tradays-live-grid">
       <article class="weekly-visual-card glass reveal">
         <img src="assets/institutional-market-visual.svg" alt="Professional market dashboard illustration" loading="lazy">
         <div>
           <strong data-ar="No Risk FX Weekly Desk" data-en="No Risk FX Weekly Desk">No Risk FX Weekly Desk</strong>
-          <p><span data-site-copy="weeklyNote" data-ar="تابع الأسبوع، حضّر السيناريوهات، وتذكّر أن الخبر ليس توصية دخول أو خروج." data-en="Track the week, prepare scenarios, and remember that news is not an entry or exit recommendation.">تابع الأسبوع، حضّر السيناريوهات، وتذكّر أن الخبر ليس توصية دخول أو خروج.</span></p>
+          <p>
+            <span data-site-copy="weeklyNote"
+                  data-ar="تابع الأسبوع، حضّر السيناريوهات، وتذكّر أن الخبر ليس توصية دخول أو خروج."
+                  data-en="Track the week, prepare scenarios, and remember that news is not an entry or exit recommendation.">تابع الأسبوع، حضّر السيناريوهات، وتذكّر أن الخبر ليس توصية دخول أو خروج.</span>
+          </p>
         </div>
       </article>
-      <article class="calendar-widget-card glass reveal delay-1">
+
+      <article class="calendar-widget-card glass reveal delay-1 tradays-live-card">
         <div class="widget-head">
           <div>
-            <span data-ar="Tradays Calendar" data-en="Tradays Calendar">Tradays Calendar</span>
+            <span data-ar="Tradays / MQL5 Calendar" data-en="Tradays / MQL5 Calendar">Tradays / MQL5 Calendar</span>
             <h3 data-ar="أحداث اقتصادية مباشرة" data-en="Live economic events">أحداث اقتصادية مباشرة</h3>
           </div>
-          <a class="widget-source" href="https://www.tradays.com/en/widget" target="_blank" rel="noopener" data-site-tradays-link><span data-ar="المصدر" data-en="Source">المصدر</span></a>
+          <a class="widget-source"
+             href="https://www.tradays.com/en/widget"
+             target="_blank"
+             rel="noopener nofollow">
+            <span data-ar="المصدر" data-en="Source">المصدر</span>
+          </a>
         </div>
-        <div class="weekly-events-shell" data-weekly-events>
-          <div class="weekly-events-empty">
-            <strong>Loading weekly events...</strong>
-            <p>يتم تحميل أخبار الأسبوع من لوحة الأدمن.</p>
+
+        <div class="tradays-widget-shell" data-tradays-widget-shell>
+          <div id="economicCalendarWidget"></div>
+          <div class="ecw-copyright">
+            <a href="https://www.mql5.com/?utm_source=calendar.widget&utm_medium=link&utm_term=economic.calendar&utm_content=visit.mql5.calendar&utm_campaign=202.calendar.widget"
+               rel="noopener nofollow"
+               target="_blank">MQL5 Algo Trading Community</a>
           </div>
         </div>
+
         <div class="weekly-actions">
-          <a class="btn secondary" href="https://www.tradays.com/en/economic-calendar" target="_blank" rel="noopener" data-tradays-open><span data-ar="افتح Tradays" data-en="Open Tradays">افتح Tradays</span></a>
-          <a class="btn ghost" href="admin.html#calendar"><span data-ar="تعديل الأخبار" data-en="Edit events">تعديل الأخبار</span></a>
+          <a class="btn secondary"
+             href="https://www.tradays.com/en/economic-calendar"
+             target="_blank"
+             rel="noopener nofollow"
+             data-tradays-open>
+            <span data-ar="افتح Tradays" data-en="Open Tradays">افتح Tradays</span>
+          </a>
+          <a class="btn ghost" href="admin.html#calendar">
+            <span data-ar="تعديل أخبار الأدمن" data-en="Edit admin events">تعديل أخبار الأدمن</span>
+          </a>
         </div>
-        <p class="widget-disclaimer"><span data-ar="بيانات الأجندة مصدرها Tradays أو إدخال لوحة الأدمن وقد تتغيّر. المحتوى للتوعية فقط وليس نصيحة مالية أو توصية شراء/بيع." data-en="Calendar data comes from Tradays or the admin desk and may change. Content is educational only, not financial advice or a buy/sell recommendation.">بيانات الأجندة مصدرها Tradays أو إدخال لوحة الأدمن وقد تتغيّر. المحتوى للتوعية فقط وليس نصيحة مالية أو توصية شراء/بيع.</span></p>
+
+        <p class="widget-disclaimer">
+          <span data-ar="جدول Tradays / MQL5 مباشر للتوعية ومتابعة الأخبار الاقتصادية فقط. ليس نصيحة مالية أو توصية شراء/بيع، وقد تتغيّر البيانات أو المواعيد من المصدر."
+                data-en="The Tradays / MQL5 calendar is for awareness and economic-news tracking only. It is not financial advice or a buy/sell recommendation, and source data or schedules may change.">جدول Tradays / MQL5 مباشر للتوعية ومتابعة الأخبار الاقتصادية فقط. ليس نصيحة مالية أو توصية شراء/بيع، وقد تتغيّر البيانات أو المواعيد من المصدر.</span>
+        </p>
       </article>
     </div>
   </div>
 </section>
+
 <section class="section" id="services">
   <div class="container">
     <div class="section-head reveal">
@@ -439,6 +547,65 @@
     <a href="https://wa.me/96176524340" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="https://dl.svgcdn.com/svg/simple-icons/whatsapp.svg" alt="WhatsApp"></a>
     <a href="https://t.me/noriskfx_support" target="_blank" rel="noopener" aria-label="Telegram Support"><img src="https://dl.svgcdn.com/svg/simple-icons/telegram.svg" alt="Telegram Support"></a>
   </div>
+
+
+  <script>
+    (function initOfficialTradaysCalendar() {
+      const shell = document.querySelector('[data-tradays-widget-shell]');
+      if (!shell) return;
+
+      let loadedLang = null;
+
+      function getLanguage() {
+        const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+        const dir = document.documentElement.getAttribute('dir') || '';
+        const stored = (localStorage.getItem('noriskfx_lang') || localStorage.getItem('lang') || '').toLowerCase();
+
+        if (htmlLang.startsWith('ar') || stored.startsWith('ar') || dir === 'rtl') return 'ar';
+        return 'en';
+      }
+
+      function loadTradaysWidget(force) {
+        const lang = getLanguage();
+        if (!force && loadedLang === lang) return;
+        loadedLang = lang;
+
+        shell.innerHTML = ''
+          + '<div id="economicCalendarWidget"></div>'
+          + '<div class="ecw-copyright">'
+          + '<a href="https://www.mql5.com/?utm_source=calendar.widget&utm_medium=link&utm_term=economic.calendar&utm_content=visit.mql5.calendar&utm_campaign=202.calendar.widget" rel="noopener nofollow" target="_blank">MQL5 Algo Trading Community</a>'
+          + '</div>';
+
+        const widgetScript = document.createElement('script');
+        widgetScript.async = true;
+        widgetScript.type = 'text/javascript';
+        widgetScript.dataset.type = 'calendar-widget';
+        widgetScript.src = 'https://www.tradays.com/c/js/widgets/calendar/widget.js?v=15';
+        widgetScript.textContent = JSON.stringify({
+          width: '100%',
+          height: '100%',
+          mode: '2',
+          fw: 'html',
+          lang,
+          theme: 1
+        });
+
+        shell.appendChild(widgetScript);
+      }
+
+      loadTradaysWidget(true);
+
+      document.addEventListener('noriskfx:language-changed', function () {
+        setTimeout(() => loadTradaysWidget(true), 250);
+      });
+
+      document.querySelectorAll('[data-lang-toggle], [data-lang], [data-language]').forEach((button) => {
+        button.addEventListener('click', function () {
+          setTimeout(() => loadTradaysWidget(true), 350);
+        });
+      });
+    })();
+  </script>
 
   <script src="script.js"></script>
   <script src="site-config.js"></script>
