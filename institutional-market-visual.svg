@@ -1,0 +1,47 @@
+<svg width="900" height="760" viewBox="0 0 900 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(458 345) rotate(90) scale(390 430)">
+      <stop stop-color="#7CEEFF" stop-opacity="0.34"/>
+      <stop offset="0.48" stop-color="#0A6E9C" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#04101F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="127" x2="739" y1="148" y2="639" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE5A3"/>
+      <stop offset="0.45" stop-color="#D3AA52"/>
+      <stop offset="1" stop-color="#7CEEFF"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="120" x2="820" y1="104" y2="674" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.035"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="900" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="760" rx="56" fill="#03101F"/>
+  <rect width="900" height="760" rx="56" fill="url(#g1)"/>
+  <g opacity="0.38">
+    <path d="M70 160H830M70 260H830M70 360H830M70 460H830M70 560H830M180 80V680M330 80V680M480 80V680M630 80V680M780 80V680" stroke="#7CEEFF" stroke-opacity="0.16"/>
+  </g>
+  <g filter="url(#blur)" opacity="0.7"><circle cx="704" cy="174" r="86" fill="#7CEEFF" fill-opacity="0.22"/><circle cx="220" cy="574" r="98" fill="#D3AA52" fill-opacity="0.16"/></g>
+  <rect x="92" y="90" width="716" height="520" rx="38" fill="url(#glass)" stroke="#7CEEFF" stroke-opacity="0.26"/>
+  <rect x="126" y="132" width="648" height="70" rx="24" fill="#06192D" stroke="white" stroke-opacity="0.1"/>
+  <circle cx="166" cy="167" r="8" fill="#7CEEFF"/><circle cx="196" cy="167" r="8" fill="#D3AA52"/><circle cx="226" cy="167" r="8" fill="#37D88F"/>
+  <rect x="126" y="236" width="418" height="300" rx="28" fill="#06192D" stroke="white" stroke-opacity="0.1"/>
+  <path d="M164 474C213 434 244 452 287 401C338 340 363 379 404 320C440 268 479 286 512 253" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M164 474C213 434 244 452 287 401C338 340 363 379 404 320C440 268 479 286 512 253" stroke="#7CEEFF" stroke-opacity="0.35" stroke-width="23" stroke-linecap="round"/>
+  <g stroke-linecap="round">
+    <path d="M186 353V430" stroke="#37D88F" stroke-width="12"/><path d="M186 380V408" stroke="#37D88F" stroke-width="38"/>
+    <path d="M252 312V420" stroke="#FF5C7A" stroke-width="12"/><path d="M252 345V395" stroke="#FF5C7A" stroke-width="38"/>
+    <path d="M318 292V394" stroke="#37D88F" stroke-width="12"/><path d="M318 320V370" stroke="#37D88F" stroke-width="38"/>
+    <path d="M384 260V358" stroke="#37D88F" stroke-width="12"/><path d="M384 292V336" stroke="#37D88F" stroke-width="38"/>
+    <path d="M450 232V330" stroke="#D3AA52" stroke-width="12"/><path d="M450 265V306" stroke="#D3AA52" stroke-width="38"/>
+  </g>
+  <rect x="576" y="236" width="198" height="136" rx="28" fill="#06192D" stroke="white" stroke-opacity="0.1"/>
+  <rect x="576" y="400" width="198" height="136" rx="28" fill="#06192D" stroke="white" stroke-opacity="0.1"/>
+  <path d="M616 304H734M616 336H702" stroke="#7CEEFF" stroke-opacity="0.72" stroke-width="12" stroke-linecap="round"/>
+  <path d="M616 468H734M616 500H690" stroke="#D3AA52" stroke-opacity="0.78" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="665" cy="636" r="42" stroke="#7CEEFF" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M98 658H802" stroke="#7CEEFF" stroke-opacity="0.18"/>
+  <text x="124" y="686" fill="#EAFBFF" font-size="24" font-weight="800" font-family="Inter,Arial,sans-serif">NO RISK FX • WEEKLY MARKET INTELLIGENCE</text>
+</svg>
