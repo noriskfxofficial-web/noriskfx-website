@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title data-title-ar="No Risk FX | Admin Command Center" data-title-en="No Risk FX | Admin Command Center">No Risk FX | Admin Command Center</title>
+  <meta name="description" content="لوحة إدارة داخلية تجريبية لـ No Risk FX." data-desc-ar="لوحة إدارة داخلية تجريبية لـ No Risk FX." data-desc-en="Prototype internal admin console for No Risk FX.">
+  <meta name="theme-color" content="#03101f">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true"></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar glass">
+      <a class="brand admin-brand" href="index.html#top" aria-label="No Risk FX">
+        <span class="brand-logo"><img src="assets/norisk-emblem-safe.png" alt="No Risk FX logo"></span>
+        <span class="brand-copy"><strong>NORISK <span>FX</span></strong><small>Command Center</small></span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="#overview" class="active"><span>Overview</span></a>
+        <a href="#site-editor"><span>Website</span></a>
+        <a href="#leads"><span>Leads</span></a>
+        <a href="#content"><span>Content</span></a>
+        <a href="#calendar"><span>Calendar</span></a>
+        <a href="#partners-admin"><span>Partners</span></a>
+        <a href="#compliance"><span>Compliance</span></a>
+      </nav>
+      <div class="admin-side-card">
+        <b>Backend-ready</b>
+        <p>عند تشغيل السيرفر، التعديلات تُحفظ في JSON وتظهر لكل الزوار. بدون السيرفر يعمل fallback محلي.</p>
+      </div>
+      <a class="btn ghost small" href="index.html">Back to website</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar glass">
+        <div>
+          <p class="eyebrow">No Risk FX Admin</p>
+          <h1>Institutional Command Center</h1>
+          <span class="admin-date" data-admin-date></span>
+        </div>
+        <div class="admin-top-actions">
+          <button class="lang-toggle" type="button" data-lang-toggle><span data-lang-label>EN</span></button>
+          <button class="btn ghost small" type="button" data-export>Export JSON</button>
+          <label class="btn ghost small file-btn">Import JSON<input type="file" accept="application/json" data-import hidden></label>
+          <button class="btn small" type="button" data-lock>Lock</button>
+        </div>
+      </header>
+
+      <section id="overview" class="admin-section">
+        <div class="admin-metrics">
+          <article class="metric-card glass"><small>Open leads</small><strong data-metric="leads">0</strong><span>Needs follow-up</span></article>
+          <article class="metric-card glass"><small>Draft posts</small><strong data-metric="posts">0</strong><span>Content pipeline</span></article>
+          <article class="metric-card glass"><small>Calendar items</small><strong data-metric="events">0</strong><span>This week / upcoming</span></article>
+          <article class="metric-card glass"><small>Compliance score</small><strong data-metric="score">0%</strong><span>Checklist status</span></article>
+        </div>
+        <div class="admin-grid two">
+          <article class="admin-panel glass">
+            <div class="panel-head"><h2>Daily operating brief</h2><span>Institutional tone</span></div>
+            <ul class="admin-brief">
+              <li>ابدأ بأي رد جديد بإطار توعوي واضح: الخدمة، المخاطر، الخطوة التالية.</li>
+              <li>لا تستخدم أي وعود أرباح أو توصيات دخول/خروج.</li>
+              <li>أي محتوى عن Forex / Gold / Crypto يجب أن يحتوي risk disclaimer.</li>
+              <li>حوّل الطلبات الجدية إلى WhatsApp مع تحديد الخبرة والهدف والخدمة المطلوبة.</li>
+            </ul>
+          </article>
+          <article class="admin-panel glass">
+            <div class="panel-head"><h2>Quick actions</h2><span>Fast access</span></div>
+            <div class="quick-actions">
+              <a href="https://wa.me/96176524340" target="_blank" rel="noopener">WhatsApp</a>
+              <a href="https://t.me/noriskfxofficial" target="_blank" rel="noopener">Telegram Channel</a>
+              <a href="https://t.me/noriskfx_support" target="_blank" rel="noopener">Telegram Support</a>
+              <a href="legal-center.html" target="_blank" rel="noopener">Legal Center</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="site-editor" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Website Editor</p><h2>تعديل محتوى الموقع</h2></div><button class="btn ghost small" type="button" data-site-reset>Reset website copy</button></div>
+        <div class="admin-grid two site-editor-grid">
+          <form class="admin-panel glass site-editor-form" data-site-editor>
+            <h3>Homepage copy</h3>
+            <label class="full">Hero eyebrow AR<input name="heroEyebrowAr" dir="rtl"></label>
+            <label class="full">Hero eyebrow EN<input name="heroEyebrowEn" dir="ltr"></label>
+            <label class="full">Hero headline AR <small>استخدم &lt;br&gt; للسطر الجديد</small><textarea name="heroHeadlineAr" rows="3" dir="rtl"></textarea></label>
+            <label class="full">Hero headline EN <small>Use &lt;br&gt; for line breaks</small><textarea name="heroHeadlineEn" rows="3" dir="ltr"></textarea></label>
+            <label class="full">Hero lead AR<textarea name="heroLeadAr" rows="4" dir="rtl"></textarea></label>
+            <label class="full">Hero lead EN<textarea name="heroLeadEn" rows="4" dir="ltr"></textarea></label>
+            <h3>Glassy stats</h3>
+            <div class="field-grid compact">
+              <label>Support value<input name="statSupportValue"></label><label>Support label AR<input name="statSupportAr" dir="rtl"></label>
+              <label>Services value<input name="statServicesValue"></label><label>Services label AR<input name="statServicesAr" dir="rtl"></label>
+              <label>Partners value<input name="statPartnersValue"></label><label>Partners label AR<input name="statPartnersAr" dir="rtl"></label>
+              <label>Trust value<input name="statTrustValue"></label><label>Trust label AR<input name="statTrustAr" dir="rtl"></label>
+            </div>
+            <h3>Weekly news / Tradays</h3>
+            <label class="full">Weekly title AR<input name="weeklyTitleAr" dir="rtl"></label>
+            <label class="full">Weekly lead AR<textarea name="weeklyLeadAr" rows="3" dir="rtl"></textarea></label>
+            <label class="full">Weekly note AR<textarea name="weeklyNoteAr" rows="3" dir="rtl"></textarea></label>
+            <label class="full">Tradays calendar URL<input name="tradaysUrl" dir="ltr"></label>
+            <h3>TradingView ticker symbols</h3>
+            <label class="full">Symbols <small>one per line: SYMBOL | Label</small><textarea name="tickerSymbols" rows="7" dir="ltr"></textarea></label>
+            <div class="site-editor-actions">
+              <button class="btn" type="submit">Save website changes</button>
+              <button class="btn ghost" type="button" data-site-export>Export website JSON</button>
+              <label class="btn ghost file-btn">Import website JSON<input type="file" accept="application/json" data-site-import hidden></label>
+            </div>
+          </form>
+          <article class="admin-panel glass site-editor-help">
+            <h3>كيف بتعدل الموقع من الأدمن؟</h3>
+            <p>بهذه النسخة، إذا شغّلت backend تنحفظ التعديلات بقاعدة بيانات JSON وتظهر لكل الزوار بعد refresh. وإذا فتحتها static فقط، بيشتغل fallback محلي على نفس المتصفح.</p>
+            <ol>
+              <li>عدّل النصوص أو رموز TradingView.</li>
+              <li>اضغط <b>Save website changes</b>.</li>
+              <li>ارجع على الصفحة الرئيسية واعمل refresh.</li>
+              <li>للإنتاج، شغّل السيرفر عبر <b>npm start</b> واستعمل دومين مع HTTPS.</li>
+            </ol>
+            <div class="disclaimer-box">مهم: صار في backend مبدئي مع Login وDatabase. قبل النشر العلني لازم تغيّر كلمة السر والـ JWT secret وتستعمل HTTPS.</div>
+            <a class="btn ghost small" href="index.html#weekly-news" target="_blank" rel="noopener">Preview weekly section</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="leads" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Lead Desk</p><h2>إدارة طلبات العملاء</h2></div><button class="btn small" data-open-modal="lead">Add lead</button></div>
+        <div class="admin-panel glass table-panel">
+          <div class="admin-table" data-leads-table></div>
+        </div>
+      </section>
+
+      <section id="content" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Content Desk</p><h2>منشورات وتحديثات</h2></div><button class="btn small" data-open-modal="post">New content</button></div>
+        <div class="admin-grid two">
+          <article class="admin-panel glass">
+            <h3>Content pipeline</h3>
+            <div class="content-list" data-post-list></div>
+          </article>
+          <article class="admin-panel glass preview-panel">
+            <h3>Risk-safe content rules</h3>
+            <p>استخدم لغة تعليمية: وعي، إدارة مخاطر، انضباط، تحليل. تجنب: مضمون، ربح سريع، توصية نارية، ادخل هلق.</p>
+            <div class="disclaimer-box">التداول ينطوي على مخاطر عالية. المحتوى للتوعية فقط وليس نصيحة مالية أو توصية شراء/بيع.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="calendar" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Economic Calendar</p><h2>أجندة اقتصادية وتشغيلية</h2></div><button class="btn small" data-open-modal="event">Add event</button></div>
+        <div class="admin-panel glass table-panel">
+          <div class="admin-table" data-events-table></div>
+        </div>
+      </section>
+
+      <section id="partners-admin" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Partner Desk</p><h2>ملاحظات الشركاء والبروكرز</h2></div><button class="btn small" data-open-modal="partner">Add note</button></div>
+        <div class="partner-admin-grid" data-partner-list></div>
+      </section>
+
+      <section id="compliance" class="admin-section">
+        <div class="panel-head section-bar"><div><p class="eyebrow">Compliance</p><h2>Checklist قبل النشر</h2></div><button class="btn ghost small" data-reset-checks>Reset checks</button></div>
+        <div class="admin-panel glass checklist" data-checklist></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="admin-login" data-login>
+    <form class="login-card glass" data-login-form>
+      <span class="login-mark"><img src="assets/norisk-emblem-safe.png" alt="No Risk FX logo"></span>
+      <p class="eyebrow">Admin Access</p>
+      <h2>No Risk FX Command Center</h2>
+      <p>Default backend password: <b>NFX-2026</b>. غيّر ADMIN_PASSWORD و JWT_SECRET قبل أي استخدام production.</p>
+      <label>Access code<input type="password" name="pin" placeholder="NFX-2026" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Enter admin</button>
+      <small data-login-error></small>
+    </form>
+  </div>
+
+  <dialog class="admin-dialog" data-dialog>
+    <form method="dialog" class="dialog-card glass" data-dialog-form>
+      <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+      <h2 data-dialog-title>Add item</h2>
+      <div data-dialog-fields></div>
+      <button class="btn" value="default" data-dialog-save>Save</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+  <script src="site-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
